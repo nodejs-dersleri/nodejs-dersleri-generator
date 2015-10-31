@@ -1,0 +1,8 @@
+
+mixin author(authorName)
+  - var author = contents.authors[authorName + '.json'];
+  span.author
+    if author
+      a(href='http://www.github.com/'+ author.metadata.repo)= author.metadata.name
+    else
+      = authorName

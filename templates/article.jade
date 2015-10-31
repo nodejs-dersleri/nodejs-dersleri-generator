@@ -1,0 +1,70 @@
+
+extends layout
+
+block append vars
+  - bodyclass = 'article-detail'
+
+block prepend title
+  | #{ page.title + ' - '}
+
+
+
+block content
+  article.article.markdown-body
+    include author
+    h2= page.title
+    p.author
+      span.octicon.octicon-pencil 
+      | 
+      mixin author(page.metadata.author)
+    
+    if page.metadata.spot 
+      section.project.blankslate
+        p
+          span.octicon.octicon-comment
+          = page.metadata.purpose 
+        if projectUrl  
+          a(href=page.metadata.projectUrl).btn
+            span.octicon.octicon-dashboard
+            | Demo
+        a(href=page.metadata.projectCode).btn.btn-primary
+          span.octicon.octicon-mark-github
+          | Kaynak kod
+      
+      
+      if page.metadata.packages
+        .dependencies
+          span.octicon.octicon-tag 
+          each package in page.metadata.packages 
+            code
+              a( target='_blank', rel='nofollow', href='https://www.npmjs.com/package/'+package)= package
+        
+    br
+    
+    section.content!= typogr(page.html).typogrify()
+    
+    - var pageUrl = locals.url + '/'+ page.url
+
+    
+    
+    #disqus_thread 
+    script.
+  
+      var disqus_config = function () {
+      this.page.url = '#{pageUrl}';
+      this.page.identifier = '#{page.url}'; 
+      };
+      
+      (function() {  // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//nodejsdersleri.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    noscript
+      | Please enable JavaScript to view the 
+      a(href='https://disqus.com/?ref_noscript', rel='nofollow') comments powered by Disqus.
+
+    
+    
+    

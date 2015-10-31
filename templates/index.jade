@@ -1,0 +1,27 @@
+
+extends layout
+
+block content
+  include author
+
+  each article in articles
+    article
+      header
+          
+        h2
+          a(href=article.url)= article.title
+      
+      section.content
+
+        if article.intro.length > 0
+          != typogr(article.intro).typogrify()
+        span.octicon.octicon-calendar
+        time(datetime= moment.utc(article.date).format('YYYY-MM-DD'))= moment.utc(article.date).format('DD. MMM YYYY')
+  
+  nav(role='navigation').pagination-post
+    if prevPage
+      a(href=prevPage.url) ← Önceki sayfa
+    if nextPage
+      a(href=nextPage.url) Sonraki sayfa →
+
+  
