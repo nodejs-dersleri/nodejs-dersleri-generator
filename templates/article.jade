@@ -1,6 +1,8 @@
 
 extends layout
 
+
+
 block append vars
   - bodyclass = 'article-detail'
 
@@ -9,9 +11,19 @@ block prepend title
 
 
 
+block prepend ogMeta
+  - var pageUrl = locals.url + page.url
+  meta(property='og:title', content= page.title)
+  meta(property='og:site_name', content= locals.name)
+  meta(property='og:url', content= pageUrl)
+  meta(property='og:image', content= pageUrl+page.metadata.image)
+
+
 block content
   article.article.markdown-body
     include author
+
+    
     h2= page.title
     p.author
       span.octicon.octicon-pencil 
@@ -22,6 +34,7 @@ block content
       section.project.blankslate
         p
           span.octicon.octicon-comment
+          | Amaç: 
           = page.metadata.purpose 
         if projectUrl  
           a(href=page.metadata.projectUrl).btn
@@ -43,13 +56,13 @@ block content
     
     section.content!= typogr(page.html).typogrify()
     
-    - var pageUrl = locals.url + '/'+ page.url
+  
 
     
     
     #disqus_thread 
     script.
-  
+      - var pageUrl = locals.url + '/'+ page.url
       var disqus_config = function () {
       this.page.url = '#{pageUrl}';
       this.page.identifier = '#{page.url}'; 

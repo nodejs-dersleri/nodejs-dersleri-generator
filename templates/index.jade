@@ -1,6 +1,7 @@
 
 extends layout
 
+
 block content
   include author
 
@@ -15,9 +16,11 @@ block content
 
         if article.intro.length > 0
           != typogr(article.intro).typogrify()
+        
+        br.clear
         span.octicon.octicon-calendar
         time(datetime= moment.utc(article.date).format('YYYY-MM-DD'))= moment.utc(article.date).format('DD. MMM YYYY')
-  
+
   nav(role='navigation').pagination-post
     if prevPage
       a(href=prevPage.url) ← Önceki sayfa
