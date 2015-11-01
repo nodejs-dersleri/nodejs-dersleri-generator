@@ -61,8 +61,11 @@ block content
     
     
     #disqus_thread 
+    
+    - var pageUrl = locals.url + '/'+ page.url
+    
     script.
-      - var pageUrl = locals.url + '/'+ page.url
+      
       var disqus_config = function () {
       this.page.url = '#{pageUrl}';
       this.page.identifier = '#{page.url}'; 
