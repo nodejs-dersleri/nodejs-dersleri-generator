@@ -27,11 +27,11 @@ Npm init yaparak başlayalım. proje dosyası oluşturup terminalden klasöre er
 npm init
 ```
 
-Modülünüzün ismini, açıklamasını, versiyonunu .etc girdikten sonra packages.json dosyamızı oluşturduk.
+Modülünüzün ismini, açıklamasını, versiyonunu .etc girdikten sonra package.json dosyamızı oluşturduk.
 
 
 
-###  packages.json
+###  package.json
 
 ```
 {
@@ -110,7 +110,7 @@ console.log("Bu ilk guid'imiz %s", guidify());
 
 Şimdi ise bir test yazalım.
 
-Bunun için `/tests` klasörü açıtorum içerisine `guidify.js` dosyamı oluşturuyorum.
+Bunun için `/tests` klasörü açıyorum içerisine `guidify.js` dosyamı oluşturuyorum.
 
 ### guidify.js
 
@@ -119,7 +119,7 @@ Bunun için `/tests` klasörü açıtorum içerisine `guidify.js` dosyamı oluş
  * Module dependencies.
  */
 
- // bir üst dizindeki moduülümüzü çağırıyoruz
+ // bir üst dizindeki modülümüzü çağırıyoruz
 var Guidify = require('../index.js');
 var assert = require('assert');
 

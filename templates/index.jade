@@ -13,8 +13,8 @@ block content
           a(href=article.url)= article.title
       
       section.content
-
-        if article.intro.length > 0
+      
+        if article.intro 
           != typogr(article.intro).typogrify()
         
         br.clear
