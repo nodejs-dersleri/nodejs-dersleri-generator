@@ -36,13 +36,14 @@ block content
           span.octicon.octicon-comment
           | Amaç: 
           = page.metadata.purpose 
-        if projectUrl  
+        if page.metadata.projectUrl  
           a(href=page.metadata.projectUrl).btn
             span.octicon.octicon-dashboard
             | Demo
-        a(href=page.metadata.projectCode).btn.btn-primary
-          span.octicon.octicon-mark-github
-          | Kaynak kod
+        if page.metadata.projectCode
+          a(href=page.metadata.projectCode).btn.btn-primary
+            span.octicon.octicon-mark-github
+            | Kaynak kod
       
       
       if page.metadata.packages
