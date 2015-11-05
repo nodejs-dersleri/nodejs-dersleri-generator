@@ -14,19 +14,20 @@ html(lang='en')
       // begin :og block
       
       block ogMeta
-        
+      
+      - var quid = '?v='+ (Math.random().toString(16)+"000000000").substr(2,8)  
     
         
       // begin :og block
           
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400italic')
       link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway:800')
       
-      link(rel='stylesheet', href='/css/normalize.css')
-      link(rel='stylesheet', href='/lib/highlight/styles/github.css')
-      link(rel='stylesheet', href='/fonts/octicons/octicons.css')
-      link(rel='stylesheet', href='/css/main.css')
+      link(rel='stylesheet', href='/css/normalize.css'+quid)
+      link(rel='stylesheet', href='/lib/highlight/styles/github.css'+quid)
+      link(rel='stylesheet', href='/fonts/octicons/octicons.css'+quid)
+      link(rel='stylesheet', href='/fonts/socicon/socicon.css'+quid)
+      link(rel='stylesheet', href='/css/main.css'+quid)
 
   body(class=bodyclass)
     
@@ -39,6 +40,7 @@ html(lang='en')
     
     // Begin: Content
     main(role=main) 
+      include partials/menu
       block content
       // Begin: Footer
       footer
@@ -53,11 +55,11 @@ html(lang='en')
             
       
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
-    script(src='/javascript/particles.min.js')
-    script(src='/javascript/canvas.js')
+    script(src='/javascript/particles.min.js'+quid)
+    script(src='/javascript/canvas.js'+quid)
     
     
-    script(src='/lib/highlight/highlight.pack.js')
+    script(src='/lib/highlight/highlight.pack.js'+quid)
     script.
       $(document).ready(function() {
         $('pre code').each(function(i, block) {

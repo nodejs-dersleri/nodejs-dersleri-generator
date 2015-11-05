@@ -3,11 +3,11 @@ title: Npm modulleri - Inquirerjs nedir?
 author: arif-cakiroglu
 date: 2015-11-3 23:30
 template: article.jade
-image : http://img.youtube.com/vi/qGWs6qI4sw8/0.jpg
+image : inquirer.jpg
 spot: true
 purpose: Inquirerjs kullanarak command line üzerinden soru sorup, alacağımız cevaplara göre işlem yaptıracağız.
 projectCode: https://github.com/nodejs-dersleri/inquirerjs-nedir
-
+tags: ['npm modülü']
 ---
 
 Yeoman ile proje oluşturduğumuzda ya da `npm init` yaptığımızda karşımıza bazı sorular gelir. Inquirerjs'le tam olarak bunu yapcağız.

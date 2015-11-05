@@ -7,7 +7,7 @@ image : log.png
 spot: true
 purpose: Her çağırıldığında genel benzersiz ID almak
 projectCode: https://github.com/arifcakiroglu/guidify
-
+tags: ['modül yapımı','npm modülü']
 ---
 
 Npm için yapacağımız bu modül her çağırdığımızda bize benzersiz ID'ler üretecek. Modülümüzü oluşturduktan sonra küçük bir test yazaıp onaydan geçirdikten sonra npm sitesine kayıt işlemini yapalım.

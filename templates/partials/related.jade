@@ -1,0 +1,14 @@
+- var relatedDocuments = _.chain(env.helpers.getArticles(contents)).filter(function(current) {
+-   return !_.isEmpty(_.intersection(current.metadata.tags, page.metadata.tags))
+- }).slice(1).first(2).value()
+
+
+
+div.related.clearfix
+  h4 Benzer Konular
+  each relatedDocument in relatedDocuments
+      a.item(href=relatedDocument.url, title="#{relatedDocument.metadata.tags}", style='background-image:url('+relatedDocument.url+relatedDocument.metadata.image)
+        span= relatedDocument.title
+    
+        
+      

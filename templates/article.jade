@@ -22,7 +22,8 @@ block prepend ogMeta
 block content
   article.article.markdown-body
     include author
-
+    
+  
     
     h2= page.title
     p.author
@@ -58,7 +59,8 @@ block content
     section.content!= typogr(page.html).typogrify()
     
   
-
+    
+    include partials/related 
     
     
     #disqus_thread 

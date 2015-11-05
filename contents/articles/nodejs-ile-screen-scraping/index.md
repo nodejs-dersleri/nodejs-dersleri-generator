@@ -8,7 +8,7 @@ image : nodejs-ile-screen-scraping-1.png
 spot: true
 purpose: Npm sitesinden modül ismini girerek dataylarını çekmek
 projectCode: https://github.com/nodejs-dersleri/screen-scraping
-
+tags: ['cheerio','request','modül yapımı']
 ---
 
 

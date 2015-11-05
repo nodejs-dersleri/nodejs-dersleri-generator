@@ -1,6 +1,7 @@
 {
   "locals": {
     "url": "http://nodejs-dersleri.github.io",
+    "baseUrl": "",
     "name": "Nodejs Dersleri",
     "owner": "Arif Cakiroglu",
     "description": "NODEJS İÇİN TÜRKÇE KAYNAK, NOTLAR, ÖRNEK UYGULAMALAR"

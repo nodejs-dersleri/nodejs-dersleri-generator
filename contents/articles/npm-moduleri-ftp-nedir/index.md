@@ -8,7 +8,7 @@ packages: ['ftp']
 spot: true
 purpose: Bir npm modulu olan 'FTP' (File transfer protocol) modulünü kullanarak bir ftp bağlantı işlemi gerçekleştireceğiz.
 projectCode: https://github.com/nodejs-dersleri/ftp
-
+tags: ['ftp', 'npm', 'modül yapımı']
 ---
 
 `ftp` modülü standart ftp protokollerini kullanarak ftp server'a bağlantı yapmamızı sağlayan bir modül. Minimal ftp adında bir konu başlığımız mevcut. Bu konuyu videolu olarak anlatmayı düşünüyorum. Şimdilik sadece `ftp` modülünün nasıl çalıştığını anlatacağım.
