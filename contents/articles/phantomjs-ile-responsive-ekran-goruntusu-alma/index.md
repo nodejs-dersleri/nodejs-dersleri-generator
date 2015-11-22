@@ -331,7 +331,7 @@ page.open(urlAddress, function (status) {
 
 function urlToDir(url) {
     var dir = url
-        .replace(/^(http|https):\/\//g, '')
+        .replace(/^(http|https):\/\//, '')
         .replace(/\/$/, '');
 
     if ( !fs.makeTree(dir) ) {
