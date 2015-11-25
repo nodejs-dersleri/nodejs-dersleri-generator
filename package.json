@@ -4,5 +4,8 @@
     "moment": "2.3.x",
     "typogr": "0.5.x"
   },
-  "private": "true"
+  "private": "true",
+  "devDependencies": {
+    "underscore": "^1.8.3"
+  }
 }
